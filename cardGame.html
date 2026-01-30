@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Declare War</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 class="title">I Declare War</h1>
+        <p class="subtitle">Vanilla JS demo using Deck of Cards API</p>
+      </header>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score">
+          <span class="label">Player 1</span>
+          <span id="score1" class="value">0</span>
+        </div>
+
+        <div class="meta">
+          <span>Cards remaining: <strong id="remaining">52</strong></span>
+        </div>
+
+        <div class="score">
+          <span class="label">Player 2</span>
+          <span id="score2" class="value">0</span>
+        </div>
+      </section>
+
+      <section class="table" aria-label="Game table">
+        <article class="player">
+          <h2 class="player-title">Player 1</h2>
+          <div class="card-slot">
+            <img id="card1" alt="Player 1 card" />
+          </div>
+          <p id="label1" class="card-label">—</p>
+        </article>
+
+        <article class="center">
+          <p id="status" class="status" aria-live="polite">
+            Click “Draw” to start.
+          </p>
+
+          <div class="actions">
+            <button id="drawBtn" class="btn btn-primary" type="button">
+              Draw
+            </button>
+            <button id="resetBtn" class="btn btn-ghost" type="button">
+              Reset
+            </button>
+          </div>
+
+          <p class="hint">
+            War rules: tie → burn 3 cards each → flip 1 card.
+          </p>
+        </article>
+
+        <article class="player">
+          <h2 class="player-title">Player 2</h2>
+          <div class="card-slot">
+            <img id="card2" alt="Player 2 card" />
+          </div>
+          <p id="label2" class="card-label">—</p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <small
+          >Built as a portfolio demo. Uses deckofcardsapi.com for card
+          images.</small
+        >
+      </footer>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
